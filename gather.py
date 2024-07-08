@@ -4,7 +4,7 @@ from utils import FooError, foo
 
 
 async def main():
-    results = await asyncio.gather(foo(1),foo(2))
+    results = await asyncio.gather(foo(1),foo(2),return_exceptions=True)
     result1 = results[0]
     result2 = results[1]
     print(f"foo 1 result: {result1}")
