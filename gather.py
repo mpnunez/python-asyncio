@@ -1,10 +1,10 @@
 import asyncio
 
-from utils import FooError, foo
+from utils import foo
 
 
 async def main():
-    results = await asyncio.gather(foo(1),foo(2),return_exceptions=True)
+    results = await asyncio.gather(foo(1),foo(2))
     result1 = results[0]
     result2 = results[1]
     print(f"foo 1 result: {result1}")
